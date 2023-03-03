@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>強化買取 状態表記なし</title>
+	 <style>
+    .center{
+      width:500px;
+      margin: 0 auto;
+    }
+    body {
+  background-image: url("https://github.com/shibu3/test/blob/main/phontoAB.JPG?raw=true");
+  background-repeat: no-repeat;
+  background-position-x:  1px;
+  background-position-y:  1px;
+  background-size: 790px;
+}
+  </style>
+</head>
+<body>
+    <div style="position:absolute; top:230px; left:195px">
+		<img  id="image_url" src="https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/S__68248413.jpg" width="405">
+	</div>
+
+	<div style="position:absolute; display: flex; align-items: center; text-align: center;  top:808px; left:240px; width:400px; height:150px; padding:0px;">	
+	<font face="Arial" color="#ff0000"><b><p style="font-size:90px"  id="cardprice1">¥10,000</p></b></font>	
+	</div>
+
+
+	<div style="position:absolute; display: flex; align-items: center; text-align: center;  top:945px; left:240px; width:400px; height:150px; padding:0px;">	
+	<font face="Arial" color="#ff0000"><b><p style="font-size:90px"  id="cardprice2">¥12,345</p></b></font>	
+	</div>
+
+	<div style="position:absolute; top:1150px; left:10px" ><p style="font-size:20px" >
+	画像URL: <input id="img_url"  type="text" style="width:500px;" value="https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/SV1V_SR_0.jpg" /></br>
+	価格A: <input id="card_price1" type="text" style="width:80px;" value="¥10,000" />      　　価格S: <input id="card_price2" type="text" style="width:80px;" value="¥10,000" />    　　　　　　　　<input id="checkButton" type="button" value="画像更新" />
+	</br></br>
+	<button type="button" onclick="smaller()">小さく</button>
+	<button type="button" onclick="larger()">大きく</button>
+	</br></br></br> 　
+	</p></div>
+
+<script>
+function butotnClick(){
+  image_url.innerText = img_url.value ;
+  cardprice1.innerText = card_price1.value ;
+  cardprice2.innerText = card_price2.value ;
+}
+
+let img_url = document.getElementById('img_url');
+img_url.value = 'https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/20190809_5d10c1.jpg';
+let image_url = document.getElementById('image_url');
+
+let card_price1 = document.getElementById('card_price1');
+card_price1.value = '¥89,990';
+let cardprice1 = document.getElementById('cardprice1');
+
+let card_price2 = document.getElementById('card_price2');
+card_price2.value = '¥99,990';
+let cardprice2 = document.getElementById('cardprice2');
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+checkButton.addEventListener("click", ()=>{
+image_url.src = img_url.value;
+});
+
+</script>
+
+
+<script>
+  let y = 90;
+  function larger()  { y *= 1.01; document.getElementById('cardprice1').style.fontSize = y + 'px'; document.getElementById('cardprice2').style.fontSize = y + 'px'; }
+  function smaller() { y /= 1.01; document.getElementById('cardprice1').style.fontSize = y + 'px'; document.getElementById('cardprice2').style.fontSize = y + 'px';}
+</script>
+
+
+</body>
+</html>
