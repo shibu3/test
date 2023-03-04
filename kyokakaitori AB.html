@@ -11,8 +11,8 @@
     body {
   background-image: url("https://github.com/shibu3/test/blob/main/phontoAB.JPG?raw=true");
   background-repeat: no-repeat;
-  background-position-x:  1px;
-  background-position-y:  1px;
+  background-position-x:  0px;
+  background-position-y:  0px;
   background-size: 790px;
 }
   </style>
@@ -31,12 +31,12 @@
 	<font face="Arial" color="#ff0000"><b><p style="font-size:90px"  id="cardprice2">¥12,345</p></b></font>	
 	</div>
 
-	<div style="position:absolute; top:1150px; left:10px" ><p style="font-size:20px" >
-	画像URL: <input id="img_url"  type="text" style="width:500px;" value="https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/SV1V_SR_0.jpg" /></br>
-	価格A: <input id="card_price1" type="text" style="width:80px;" value="¥10,000" />      　　価格S: <input id="card_price2" type="text" style="width:80px;" value="¥10,000" />    　　　　　　　　<input id="checkButton" type="button" value="画像更新" />
+	<div style="position:absolute; top:1150px; left:10px" ><p style="font-size:30px" >
+	画像URL: <input id="img_url"  type="text"  style="font-size:30px; width:600px;" /></br></br>
+	価格A: <input id="card_price1" type="text" style="font-size:30px; width:150px;" value="¥10,000" /> 　価格S: <input id="card_price2" type="text" style="font-size:30px; width:150px;" value="¥10,000" />    　　　　　　　　<input id="checkButton" type="button" style="font-size: 30px;" value="画像更新" />
 	</br></br>
-	<button type="button" onclick="smaller()">小さく</button>
-	<button type="button" onclick="larger()">大きく</button>
+	<button type="button" onclick="smaller()" style="font-size: 30px;">小さく</button>
+	<button type="button" onclick="larger()" style="font-size: 30px;">大きく</button>
 	</br></br></br> 　
 	</p></div>
 
@@ -48,7 +48,7 @@ function butotnClick(){
 }
 
 let img_url = document.getElementById('img_url');
-img_url.value = 'https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/20190809_5d10c1.jpg';
+img_url.value = '';
 let image_url = document.getElementById('image_url');
 
 let card_price1 = document.getElementById('card_price1');
