@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>強化買取 状態表記なし</title>
+	 <style>
+    .center{
+      width:500px;
+      margin: 0 auto;
+    }
+    body {
+  background-image: url("https://github.com/shibu3/test/blob/main/phontoAB.JPG?raw=true");
+  background-repeat: no-repeat;
+  background-position-x:  0px;
+  background-position-y:  0px;
+  background-size: 790px;
+}
+  </style>
+</head>
+<body>
+    <div style="position:absolute; top:239px; left:200px">
+		<img  id="image_url" src="https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/S__68248413.jpg" width="395">
+	</div>
+
+	<div style="position:absolute; display: flex; align-items: center; text-align: center;  top:809px; left:239px; width:400px; height:150px; padding:0px;">	
+	<font face="Arial" color="#ff0000"><b><p style="font-size:90px"  id="cardprice1">¥10,000</p></b></font>	
+	</div>
+
+
+	<div style="position:absolute; display: flex; align-items: center; text-align: center;  top:944px; left:240px; width:400px; height:150px; padding:0px;">	
+	<font face="Arial" color="#ff0000"><b><p style="font-size:90px"  id="cardprice2">¥99,999</p></b></font>	
+	</div>
+
+	<div style="position:absolute; top:1150px; left:10px" ><p style="font-size:30px" >
+	画像URL: <input id="img_url"  type="text"  style="font-size:30px; width:600px;" /></br></br>
+	価格A: <input id="card_price1" type="text" style="font-size:30px; width:150px;" value="¥10,000" />　価格S: <input id="card_price2" type="text" style="font-size:30px; width:150px;" value="¥10,000" />　<input id="checkButton" type="button" style="font-size: 30px;" value="画像更新" />
+	</br></br></br></br>
+	<button type="button" onclick="smaller()" style="font-size: 50px;">小さく</button>
+	<button type="button" onclick="larger()" style="font-size: 50px;">大きく</button>
+	</br></br></br> 　
+	</p></div>
+
+<script>
+function butotnClick(){
+  image_url.innerText = img_url.value ;
+  cardprice1.innerText = card_price1.value ;
+  cardprice2.innerText = card_price2.value ;
+}
+
+let img_url = document.getElementById('img_url');
+img_url.value = '';
+let image_url = document.getElementById('image_url');
+
+let card_price1 = document.getElementById('card_price1');
+card_price1.value = '¥';
+let cardprice1 = document.getElementById('cardprice1');
+
+let card_price2 = document.getElementById('card_price2');
+card_price2.value = '¥';
+let cardprice2 = document.getElementById('cardprice2');
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+checkButton.addEventListener("click", ()=>{
+image_url.src = img_url.value;
+});
+
+</script>
+
+
+<script>
+  let y = 90;
+  function larger()  { y *= 1.01; document.getElementById('cardprice1').style.fontSize = y + 'px'; document.getElementById('cardprice2').style.fontSize = y + 'px'; }
+  function smaller() { y /= 1.01; document.getElementById('cardprice1').style.fontSize = y + 'px'; document.getElementById('cardprice2').style.fontSize = y + 'px';}
+</script>
+
+
+</body>
+</html>
