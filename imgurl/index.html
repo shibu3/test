@@ -1,1 +1,21 @@
-aa
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>画像URL一覧</title>
+</head>
+
+<body>
+<h2>カード画像 URL一覧</h2>
+<hr>
+<h2>女の子</h2>
+<IMG  id="img2" onclick="copyToClipboard('https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/20190809_5d10c1.jpg','img2')" src="https://www.cardrush-pokemon.jp/data/cardrushpokemon/product/20190809_5d10c1.jpg" width="100" >
+
+    <script>
+        function copyToClipboard(txt,imgno) {
+            navigator.clipboard.writeText(txt);
+            document.getElementById(imgno).style.opacity = '0.7';
+            window.setTimeout(function(){document.getElementById(imgno).style.opacity = '1';}, 500);
+                    }
+    </script>
+</body>
